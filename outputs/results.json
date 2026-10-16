@@ -1,0 +1,169 @@
+{
+  "source": "uci",
+  "n_rows": 33367,
+  "date_start": "2012-10-09 09:00:00",
+  "date_end": "2018-09-30 23:00:00",
+  "n_train": 26693,
+  "n_test": 6674,
+  "n_features_no_lags": 22,
+  "n_features_with_lags": 27,
+  "target_mean": 3266.0679713489376,
+  "target_max": 7280.0,
+  "results": [
+    {
+      "features": "Baseline",
+      "model": "Historical mean (day-of-week x hour)",
+      "MAE": 280.2824876619209,
+      "RMSE": 497.40855889309296,
+      "R2": 0.9354371761034141
+    },
+    {
+      "features": "Baseline",
+      "model": "Persistence (previous hour)",
+      "MAE": 584.2497752472281,
+      "RMSE": 807.3691229290818,
+      "R2": 0.8299015789506619
+    },
+    {
+      "features": "Calendar + weather",
+      "model": "Ridge",
+      "MAE": 808.3921548346206,
+      "RMSE": 1019.8412390004096,
+      "R2": 0.7285929349487641
+    },
+    {
+      "features": "Calendar + weather",
+      "model": "Random Forest",
+      "MAE": 235.98084034648244,
+      "RMSE": 393.3482766019916,
+      "R2": 0.9596251879852732
+    },
+    {
+      "features": "Calendar + weather",
+      "model": "Gradient Boosting",
+      "MAE": 228.02325907715394,
+      "RMSE": 376.71070725106364,
+      "R2": 0.962968445893074
+    },
+    {
+      "features": "Calendar + weather + lags",
+      "model": "Ridge",
+      "MAE": 284.85514652802897,
+      "RMSE": 404.2633519293317,
+      "R2": 0.9573533663870255
+    },
+    {
+      "features": "Calendar + weather + lags",
+      "model": "Random Forest",
+      "MAE": 150.72265109908784,
+      "RMSE": 239.28326067073468,
+      "R2": 0.9850589662737171
+    },
+    {
+      "features": "Calendar + weather + lags",
+      "model": "Gradient Boosting",
+      "MAE": 146.01358160539502,
+      "RMSE": 224.60836956845438,
+      "R2": 0.9868353935536387
+    }
+  ],
+  "level_edges": [
+    1456.0,
+    2912.0,
+    4368.0,
+    5824.0
+  ],
+  "level_share_test": [
+    0.261,
+    0.144,
+    0.204,
+    0.294,
+    0.098
+  ],
+  "classification": [
+    {
+      "features": "Baseline",
+      "model": "Majority level",
+      "Accuracy": 0.29382679053041655,
+      "Within-1": 0.5955948456697633,
+      "Macro-F1": 0.09083960625361899
+    },
+    {
+      "features": "Baseline",
+      "model": "Historical mean -> level",
+      "Accuracy": 0.806862451303566,
+      "Within-1": 0.9896613724902608,
+      "Macro-F1": 0.7844178008184661
+    },
+    {
+      "features": "Baseline",
+      "model": "Persistence -> level",
+      "Accuracy": 0.6639196883428229,
+      "Within-1": 0.9643392268504645,
+      "Macro-F1": 0.6229190871148493
+    },
+    {
+      "features": "Calendar + weather",
+      "model": "Logistic Regression",
+      "Accuracy": 0.6757566676655679,
+      "Within-1": 0.9685346119268804,
+      "Macro-F1": 0.5590073406615724
+    },
+    {
+      "features": "Calendar + weather",
+      "model": "Random Forest",
+      "Accuracy": 0.8306862451303566,
+      "Within-1": 0.991309559484567,
+      "Macro-F1": 0.8151891968814221
+    },
+    {
+      "features": "Calendar + weather",
+      "model": "Gradient Boosting",
+      "Accuracy": 0.8393766856457896,
+      "Within-1": 0.9934072520227749,
+      "Macro-F1": 0.8252600256396075
+    },
+    {
+      "features": "Calendar + weather",
+      "model": "Neural Net (MLP, 32 hidden)",
+      "Accuracy": 0.8125561881929877,
+      "Within-1": 0.9931075816601738,
+      "Macro-F1": 0.7941800736431769
+    },
+    {
+      "features": "Calendar + weather + lags",
+      "model": "Logistic Regression",
+      "Accuracy": 0.8516631705124363,
+      "Within-1": 0.9980521426430926,
+      "Macro-F1": 0.8361813267508207
+    },
+    {
+      "features": "Calendar + weather + lags",
+      "model": "Random Forest",
+      "Accuracy": 0.9003596044351214,
+      "Within-1": 0.9995504944560983,
+      "Macro-F1": 0.8893680226984492
+    },
+    {
+      "features": "Calendar + weather + lags",
+      "model": "Gradient Boosting",
+      "Accuracy": 0.8952652082709021,
+      "Within-1": 0.9997003296373989,
+      "Macro-F1": 0.8832626805323974
+    },
+    {
+      "features": "Calendar + weather + lags",
+      "model": "Neural Net (MLP, 32 hidden)",
+      "Accuracy": 0.8801318549595445,
+      "Within-1": 0.9994006592747977,
+      "Macro-F1": 0.867137529018599
+    },
+    {
+      "features": "Day + hour only",
+      "model": "Paper-style MLP (4 hidden)",
+      "Accuracy": 0.664219358705424,
+      "Within-1": 0.9390170812106683,
+      "Macro-F1": 0.5513625175800991
+    }
+  ]
+}
